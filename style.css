@@ -1,0 +1,310 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("topography.svg"),
+        linear-gradient(110deg, #f93d66, #6d47d9);
+    background-size: 340px, auto;
+    width: 90vw;
+    height: 100vh;
+    margin: 50px;
+    background-attachment: fixed;
+    letter-spacing: -1px;
+    margin: 15px;
+}
+
+.container {
+    margin: auto;
+}
+
+/* nav section start */
+button {
+    display: none;
+    background: #ffc600;
+    border: 0;
+    padding: 10px 20px;
+}
+
+.nav-section {
+    ul {
+        display: flex;
+        gap: 20px;
+        padding: 30px;
+        justify-content: space-around;
+    }
+
+    li {
+        background-color: #ffbb00;
+        width: 20%;
+        padding: 18px;
+        font-weight: bold;
+        text-align: center;
+        list-style: none;
+    }
+
+}
+.menu-list li{
+    transform: scale(1);
+    transition: linear .8s;
+}
+.menu-list li:hover{
+    transform: scale(0.4);
+}
+
+/* -------nav section close ----------*/
+
+
+
+/*------------- hero section start ------------*/
+.hero-sec {
+
+    display: grid;
+    /* grid-template-columns: 8fr 4fr;
+    grid-template-rows: 6fr 6fr; */
+    gap: 20px;
+    grid-template-areas:
+        "banner card1"
+        "banner card2";
+
+    >* {
+        border: 2px solid;
+    }
+}
+
+.Teco-joint-banner {
+    grid-area: banner;
+    min-height: 400px;
+    background-image: url(taco\ \(1\).jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+    border-style: none;
+}
+
+
+.Teco-joint-banner>* {
+    background: #ffbb00b3;
+    padding: 5px;
+}
+
+/* price card start */
+.card {
+    background-color: #ffbb00;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-style: none;
+}
+
+.card {
+    h1 {
+        font-size: 4rem;
+        font-weight: lighter;
+    }
+
+    p {
+        margin: 0;
+        font-weight: bolder;
+    }
+}
+
+
+.price-card1 {
+    grid-area: card1;
+
+}
+
+.price-card2 {
+    grid-area: card2;
+}
+
+.price {
+    font-size: 60px;
+    font-weight: 300;
+}
+
+/*------------ hero section close----------- */
+
+/*----------- feature section start------------ */
+.feature-sec {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    margin-top: 20px;
+}
+
+.feature {
+    padding: 10%;
+    border: 1px solid rgb(5, 5, 6);
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 0px 4px rgba(255, 255, 255, 2.1);
+
+    h3 {
+        font-size: 1.17em;
+    }
+
+    p {
+        color: rgb(99, 84, 84);
+        text-shadow: 1px 1px 1px rgb(9, 8, 8);
+    }
+
+    .icon {
+        font-size: 4rem;
+    }
+
+}
+.feature{
+    transform: scale(1);
+    transition: linear .7s;
+}
+.feature:hover{
+    transform: scale(0.9);
+}
+
+/* --------------feature section close  ---------------  */
+
+/* -----------aabout section start--------------- */
+.about-sec {
+    background-color: white;
+    padding: 5%;
+    margin: 2%;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    align-items: center;
+img{
+    width: 120%;
+}
+    
+
+
+    h3 {
+        font-size: 2em;
+        font-weight: bolder;
+    }
+
+    p {
+        font-size: 1em;
+        font-weight: bolder;
+        text-shadow: 1px 1px 5px rgb(159, 151, 151);
+    }
+
+    .btn-lern {
+        margin-top: 10px;
+        display: block;
+        padding: 2%;
+        background-color: #ffbb00;
+        border-style: none;
+    }
+}
+
+/*----------------- about section close------------ */
+
+/* -----------------Gallery section start------------- */
+.gallery-heading {
+    display:block;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin: 1% 0;
+    gap: 1%;
+}
+.gallery-heading h2 {
+    grid-column: 1 ;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-gap: 20px;
+    align-items: center;
+  }
+  
+  
+
+h2::before {
+    display: block;
+    content: '  ';
+    height: 10px;
+    background: linear-gradient( to left,yellow ,#1718151e );
+}
+h2::after {
+    display: block;
+    content: ' ';
+    color: transparent;
+    height: 10px;
+    background: linear-gradient( to right,#dcb417,#1718151e);
+}
+
+.images-include {
+    display: grid;
+    gap: 1%;
+    grid-template-columns: 2fr 2fr 2fr 2fr 2fr;
+    grid-template-rows: 6fr 6fr;
+
+}
+
+/* --------------gallery section close----------------- */
+
+
+/* -----------------creaative & resposiveness sec start -----------------*/
+@media screen and (max-width:500px) {
+    .menu-list li {
+        display: none;
+    }
+
+    button {
+        display: block;
+    }
+
+    .menu-list {
+        display: none;
+    }
+
+    .hero-sec {
+        /* width: 150%; */
+        grid-template-areas:
+            "banner"
+            "card1"
+            "card2"
+    }
+
+    .card {
+        margin: 1%;
+    }
+
+    .feature-sec {
+        display: block;
+    }
+
+    .feature {
+        margin: 2%;
+    }
+
+    .about-sec {
+        display: block;
+        margin: 2%;
+        grid-template-columns: 1fr;
+
+    }
+
+    .images-include {
+        display: block;
+        text-align: center;
+        gap: 20px;
+
+        img {
+            width: 70%;
+
+        }
+    }
+}
+
+/* -----------------creaative & resposiveness sec close -----------------*/
